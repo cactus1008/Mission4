@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Mission4
 {
-    internal class HangmanTools
+    internal class TicTools
     {
     }
 }
