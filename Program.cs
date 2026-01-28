@@ -15,10 +15,7 @@
  */
 
 // Method signature #1
-public string[9] PrintBoard(string[] boardArray, int position, bool xo);
-{
-    // Method implementation
-}
+
 // Method signature #2
 public string CheckWinner(string[] boardArray);
 {
