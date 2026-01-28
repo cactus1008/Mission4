@@ -21,7 +21,7 @@ namespace Mission4
             Console.WriteLine(" └───┴───┴───┘");  
         }
         // Method signature #2
-        public (bool gameOver, string winner) CheckWinner(char[] boardArray)
+        public (bool gameOver, int winner) CheckWinner(char[] boardArray)
         {
             // All possible winning combination indexes
             int[][] winCombos =
@@ -50,12 +50,12 @@ namespace Mission4
                     // Player 1 wins if the winning combo had all X's
                     if (charToCheck == 'X')
                     {
-                        return (true, "1");
+                        return (true, 1);
                     }
                     // Player 2 wins if the winning combo had all O's
                     if (charToCheck == 'O')
                     {
-                        return (true, "2");
+                        return (true, 2);
                     }
                 }
             }
@@ -65,12 +65,12 @@ namespace Mission4
             {
                 if (boardArray[i] != 'X' && boardArray[i] != 'O')
                 {
-                    return (false, "");
+                    return (false, 0);
                 }
             }
 
             // If no winning combo was found and all areas are claimed
-            return (true, "");
+            return (true, 0);
         }
     }
 }
