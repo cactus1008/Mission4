@@ -69,6 +69,7 @@ do
         (gameOver, int winner) = tt.CheckWinner(gameBoard);
         if (gameOver)
         {
+            // print who the winner is
             tt.PrintBoard(gameBoard);
             if (winner == 0)
             {
