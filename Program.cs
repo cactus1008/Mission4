@@ -15,30 +15,48 @@
  */
 
 // Welcome the user to the game
+using Mission4;
 using System.Threading.Tasks;
 
 bool gameOver = false;
 int position = 0;
-int[] gameBoard = new int[9];
+char[] gameBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 string tempPosition = "";
+
+TicTools tt = new TicTools();
 
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
 // Game flow
 do
 {
+    tt.PrintBoard(gameBoard);
     // Ask each player in turn for their choice and update the game board array
     Console.WriteLine("Player 1 (X's), choose a position:");
     tempPosition = Console.ReadLine();
+    if(int.TryParse(tempPosition, out position) && (position > 0) && (position < 10))
+    {
+        gameBoard[position - 1] = 'X';
+    }
+    else
+    {
+        Console.WriteLine("Not a valid position. Please enter a valid integer");
+    }
+
+
+    // After player 2:
+
+    tt.PrintBoard(gameBoard);
+    tt.CheckWinner(gameBoard);
 } while (!gameOver);
 
 // Method signature #1
-public string[9] PrintBoard(string[] boardArray, int position, bool xo);
+public string PrintBoard(char[] boardArray);
 {
     // Method implementation
 }
 // Method signature #2
-public string CheckWinner(string[] boardArray);
+public string CheckWinner(char[] boardArray);
 {
     // Method implementation
 }
