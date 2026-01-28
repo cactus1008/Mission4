@@ -17,10 +17,15 @@
 // Welcome the user to the game
 using System.Threading.Tasks;
 
+bool gameOver = false;
+
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
 // Ask each player in turn for their choice and update the game board array
-Console.WriteLine("");
+do
+{
+
+} while (!gameOver);
 
 // Method signature #1
 public string[9] PrintBoard(string[] boardArray, int position, bool xo);
