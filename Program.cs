@@ -12,6 +12,7 @@ char player = 'X';
 int turnNumber = 1;
 char[] gameBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 string tempPosition = "";
+List<int> chosen = new List<int>();
 
 //Declare and instantiate an instance of our class
 TicTools tt = new TicTools();
@@ -40,18 +41,26 @@ do
     tempPosition = Console.ReadLine();
     
     //Check for a valid selection
-    bool isValid = int.TryParse(tempPosition, out position) && (position > 0) && (position < 10);
+    bool isValid = int.TryParse(tempPosition, out position) && (position > 0) && (position < 10) && (!chosen.Contains(position));
     if(!isValid)
     {
         //Error message if invalid
-        Console.WriteLine("Not a valid position. Please enter a valid integer");
-        
+        if (chosen.Contains(position))
+        {
+            Console.WriteLine("This position has already been chosen");
+        }
+        else
+        {
+            Console.WriteLine("Not a valid position. Please enter a valid integer");
+        }
     }
+
     //Game Logic
     else
     {
         //Replace position with X or O based on player
         gameBoard[position - 1] = player; 
+        chosen.Add(position);
         
         //Increment turn
         turnNumber++;
