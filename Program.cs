@@ -18,13 +18,17 @@
 using System.Threading.Tasks;
 
 bool gameOver = false;
+int position = 0;
+string tempPosition = "";
 
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
-// Ask each player in turn for their choice and update the game board array
+// Game flow
 do
 {
-
+    // Ask each player in turn for their choice and update the game board array
+    Console.WriteLine("Player 1 (X's), choose a position:");
+    tempPosition = Console.ReadLine();
 } while (!gameOver);
 
 // Method signature #1
