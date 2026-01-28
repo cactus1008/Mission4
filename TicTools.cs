@@ -8,9 +8,17 @@ namespace Mission4
     {
 
         // Method signature #1
-        public string[9] PrintBoard(string[] boardArray, int position, bool xo);
+        public static void PrintBoard(char[] position)
         {
-            // Method implementation
+
+            // This is the output of the tictac toe board
+            Console.WriteLine(" ┌───┬───┬───┐");
+            Console.WriteLine($" │ {position[0]} │ {position[1]} │ {position[2]} │");
+            Console.WriteLine(" ├───┼───┼───┤");
+            Console.WriteLine($" │ {position[3]} │ {position[4]} │ {position[5]} │");
+            Console.WriteLine(" ├───┼───┼───┤");
+            Console.WriteLine($" │ {position[6]} │ {position[7]} │ {position[8]} │");
+            Console.WriteLine(" └───┴───┴───┘");  
         }
         // Method signature #2
         public (bool gameOver, string winner) CheckWinner(char[] boardArray)

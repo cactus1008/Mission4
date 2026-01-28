@@ -51,10 +51,7 @@ do
 } while (!gameOver);
 
 // Method signature #1
-public string PrintBoard(char[] boardArray);
-{
-    // Method implementation
-}
+
 // Method signature #2
 public string CheckWinner(char[] boardArray);
 {
