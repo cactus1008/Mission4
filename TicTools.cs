@@ -8,7 +8,7 @@ namespace Mission4
     {
 
         // Method signature #1
-        public static void PrintBoard(char[] position)
+        public void PrintBoard(char[] position)
         {
 
             // This is the output of the tictac toe board
