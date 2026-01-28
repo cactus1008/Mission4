@@ -14,6 +14,14 @@
  * Contain a method that receives the game board array as input and returns if there is a winner and who it was
  */
 
+// Welcome the user to the game
+using System.Threading.Tasks;
+
+Console.WriteLine("Welcome to Tic-Tac-Toe!");
+
+// Ask each player in turn for their choice and update the game board array
+Console.WriteLine("");
+
 // Method signature #1
 public string[9] PrintBoard(string[] boardArray, int position, bool xo);
 {
