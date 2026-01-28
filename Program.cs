@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 
 bool gameOver = false;
 int position = 0;
+int[] gameBoard = new int[9];
 string tempPosition = "";
 
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
