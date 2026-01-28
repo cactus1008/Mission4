@@ -19,7 +19,6 @@ TicTools tt = new TicTools();
 
 // Welcome the user to the game
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
-tt.PrintBoard(gameBoard);
 
 // Game flow
 do
@@ -66,24 +65,23 @@ do
         turnNumber++;
         
         //Check for winners
-        tt.CheckWinner(gameBoard);
+        (gameOver, int winner) = tt.CheckWinner(gameBoard);
+        if (gameOver)
+        {
+            if (winner == 0)
+            {
+                Console.WriteLine("The game is a Tie! No winner!");
+            }
+            else if (winner == 1)
+            {
+                Console.WriteLine("Player X wins!!!");
+            }
+            else if (winner == 2)
+            {
+                Console.WriteLine("Player O wins!!!");
+            }
+        }
     }
 } while (!gameOver);
 
-
-/*
-* 2) The supporting class (with whichever name you choose) will:
-* Receive the “board” array from the driver class
-* Contain a method that prints the board based on the information passed to it
-    * Contain a method that receives the game board array as input and returns if there is a winner and who it was
-    */
-// Method signature #1
-//public string PrintBoard(char[] boardArray);
-{
-    // Method implementation
-}
-// Method signature #2
-//public string CheckWinner(char[] boardArray);
-{
-    // Method implementation
-}
+Console.WriteLine("Thanks for playing!");
