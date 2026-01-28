@@ -31,8 +31,9 @@ do
     {
         player = 'O';
     }
-    
+
     //Print Updated Game Board
+    Console.WriteLine("");
     tt.PrintBoard(gameBoard);
     
     // Ask each player in turn for their choice and update the game board array
