@@ -68,6 +68,7 @@ do
         (gameOver, int winner) = tt.CheckWinner(gameBoard);
         if (gameOver)
         {
+            tt.PrintBoard(gameBoard);
             if (winner == 0)
             {
                 Console.WriteLine("The game is a Tie! No winner!");
